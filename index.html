@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="description" content="web-app">
+    <meta name="keywords" content="lab, java, html, css, ajax, fastCGI">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/addStyle.css">
+
+    <title>lab1</title>
+
+    <script src="./js/script.js" defer></script>
+
+</head>
+
+<body>
+
+    <div class="header">
+        
+        <div class="container">
+            
+
+            <a class="header-logo" href="https://t.me/Birmingham_English" target="_blank">
+
+                <img class="image" 
+                src="imgs/eng_man.png" 
+                alt="К сожалению, ваш браузер не поддерживает картинку!">
+
+            </a>
+
+            <div class="FIO">
+                <p>Абдыраев Р.К.<br>P3224</p>                
+            </div>
+
+            <div class="navbar-wrap">
+
+                <ul class="navbar-menu">
+              
+                    <li>
+                        <a href="https://itmo.ru/?ysclid=m2bxu9bmn4355431101" target="_blank">ITMO</a>
+                    </li>
+                    
+                    <li>
+                        <a href="https://doka-guide.vercel.app/css/flexbox-guide/" target="_blank">
+                            Позиционирование
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="lab_1.pdf" target="_blank">
+                            Условия задачи
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://yandex.ru/pogoda/saint-petersburg" target="_blank">
+                            Погода в СПБ
+                        </a>
+                    </li>
+                
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="main">
+
+        <div class="box" id="container">
+
+            <div class="flexelement" id="img-flex">
+                
+                <img src="imgs/areas.png" alt="Ваш браузер не поддерживает!">
+
+            </div>
+
+            <div class="flexelement" id="formElement">
+
+                <form class="form" id="accessForm" method="post" novalidate>
+
+                    <fieldset>
+
+                        <legend>X:</legend>
+
+                        <div class="X-text">
+
+                            <input type="text" name="X" id="X-value" name="x" class="field_control" placeholder="X &#8712; (-3;3)" maxlength="16">
+                            <div class="potentionalXError impossibleError"></div>
+                            
+                        </div>
+
+                    </fieldset>       
+
+                    <fieldset>
+
+                        <legend>Y:</legend>
+
+                        <div class="Y-text">
+
+                            <input type="text" name="Y" id="Y-value" name="y" class="field_control" placeholder="Y &#8712; (-5;3)" maxlength="16">
+                            <div class="potentionalYError impossibleError"></div>
+
+                        </div>
+
+                    </fieldset>
+
+                    <fieldset>
+
+                        <legend>R:</legend>
+
+                        <div class="R-radio">
+                            
+                            <label for="r1"> 
+                                <input type="radio" name="R" class="r-radio" id="r1" value="1" checked>
+                                1
+                            </label>
+
+                            <label for="r1-5">
+                                <input type="radio" name="R" class="r-radio" id="r1-5" value="1.5">
+                                1.5
+                            </label>
+
+                            <label for="r2">
+                                <input type="radio" name="R" class="r-radio" id="r2" value="2">
+                                 2
+                            </label>
+
+                            <label for="r2-5">
+                                <input type="radio" name="R" class="r-radio" id="r2-5" value="2.5">
+                                2.5
+                            </label>
+
+                            <label for="r3">
+                                <input type="radio" name="R" class="r-radio" id="r3" value="3">
+                                3
+                            </label>
+
+                            <div class="potentionalRError impossibleError" id="rError"></div>
+
+                        </div>
+
+                    </fieldset>
+
+                    <div class="button-position">
+
+                        <button type="submit" name="SUB" class="btn" id="send">ОТПРАВИТЬ</button>
+                        <button type="reset" name="DEL" class="btn" id="remove">СТЕРЕТЬ</button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer">
+
+        <table id="future-table">
+
+            <thead>
+                <tr>
+                    <th>X</th>
+                    <th>Y</th>
+                    <th>R</th>
+                    <th>Result</th>
+                    <th>Current Time</th>
+                    <th>Script Execution Time</th>
+                </tr>
+            </thead>
+
+            <tbody id="resultBody"></tbody>
+
+        </table>
+
+    </div>
+
+</body>
+</html>

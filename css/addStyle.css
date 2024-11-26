@@ -1,0 +1,122 @@
+/*стили основного контента сайта 
+---------------------------------------------------
+селекторы идентификаторов, они уникальные 
+и нельзя указать такой же id для другого элемента*/
+#container{
+  background-color: honeydew;
+  width: 600px;
+}
+.box{
+  box-shadow: 1px 1px 4px 4px;
+  padding: 10px;
+  margin-top: 30px;
+  border: 1px solid whitesmoke;
+
+}
+.flexelement{
+  font-size: 14px;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: gold;
+  background-image: linear-gradient(rgb(74, 0, 163), rgb(190, 9, 166));
+  border: 2px solid black;
+  margin: 30px;
+  padding: 10px;
+  border-radius: 20px;
+}
+#img-flex{
+  font-size: 0;
+  margin: 0;
+  padding: 0;
+  border-radius: 6px;
+  border: 4px dotted indigo;
+  margin-left: 20px;
+  box-shadow: 4px 4px 0px darkmagenta;
+}
+/*---------------------------------------------------------------------
+main сделали флекс-контейнером, теперь мы можем спокойно маневрировать
+div-элементом box, также мы сделали и с box-элементом, а его дочерние
+элементы - flexelemet'ы */
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: auto;
+  margin-top: 20px;
+}
+.main .box{
+  width: auto;
+}
+.box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*Псевдоэлемент placeholder*/
+::placeholder{
+  font-family: monospace;
+  font-size: 16px;
+  font-style: italic;
+}
+/*---------------------------------------------*/
+.footer{
+  translate: 0px 20px;
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 14px;
+  font-family: 'Times New Roman', Times, serif;
+}
+#future-table{
+  background-color: deeppink;
+  display: flex;
+  justify-content: center;
+  width: auto;
+  border: 2px solid black;
+  padding: 5px;
+}
+#future-table th{
+  display: inline-flex;
+  color: darkblue;
+  padding: 0px 10px 0px 10px;
+}
+/*------------------------------------------------*/
+.button-position .btn{
+  margin: 8px 6px 0px 6px;
+  border-radius: 10px;
+  background-color: purple;
+  color: white;
+  font-weight: 600;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 12px;
+  border: 2px solid black;
+}
+.button-position{
+  padding: 6px;
+  display: flex;
+  justify-content: center;
+}
+.btn:hover{
+  box-shadow: 2px 2px 2px black;
+  transition: all 0.5s ease-in;
+  color: black;
+  cursor: pointer;
+  scale: 1.082;
+  transition: all 0.4s ease-in-out;
+}
+[name = "SUB"]:hover{
+  background-color: olive;
+  color: honeydew;
+}
+[name = "DEL"]:hover{
+  background-color: red;
+  color: honeydew;
+}
+/*Стилизация потенциональных невалидированных значений*/
+.impossibleError{
+  font-family: monospace;
+  font-size: 12px;
+  color:aqua;
+  font-weight: 500;
+}
